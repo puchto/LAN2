@@ -1,18 +1,26 @@
 h1 a {
-    color: #90b460;
+    color: #000000;
 }
+h2 a {
+	color: #000000;
+	}
+h3 a {
+	color: #000000;
+	}
+
 .add {
 	font-family: bold;
 	}
 
-body {
-    padding-left: 20px;
+.backgr {
+    padding-left: 2px;
+    background-color: lightgrey;
 }
 
 .page-header {
-    background-color: #0034ad;
-    margin-top: 30;
-    padding: 1px 1px 1px 10px;
+    background-color: #808080;
+    margin-top: 5;
+    
 }
 
 

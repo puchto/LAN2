@@ -1,17 +1,22 @@
+<!DOCTYPE html>
 {% extends 'clients/base.html' %}
 
 {% block content %}
-<table>
+<table style="width:100%">
+<tr>
+<th>Klient</th>
+<th>MAC</th>
+
 {% for client in clients %}
 
 
 <tr>
-	<td><a href="{%url 'client_info' pk=client.pk %}"> {{client.cl_address_ul}}  {{client.cl_address_nr_d}}/{{client.cl_address_nr_m}} </a></td>	
+	<td>{{client.cl_address_ul}} {{client.cl_address_nr_d}}/{{client.cl_address_nr_m}}</td>	
 	<td>{{client.mac}}</td>
 	<td>{{client.ip_add}}</td>
 	<td>{% if client.kl_service == '0' %} Aktywny {% elif client.kl_service == '3' %} Windykacja 
 	{% elif client.kl_service == '5' %} Odłączony {% endif %} </td>
-	<td>	{{client.downl}}</td>
+	<td> {{client.downl}}</td>
 	<td>{{client.upl}}</td>
 	<td><a href="{%url 'client_edit_Client_fw' pk=client.pk %}"> Edycja </a></td>
 </tr>

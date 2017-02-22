@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 {% extends 'clients/base.html' %}
 
 {% block content %}

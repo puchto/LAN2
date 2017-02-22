@@ -1,20 +1,21 @@
+<!DOCTYPE html>
 {% load staticfiles %}
 <html lang="pl-PL">
 	<head>
    	<title>LAN Sosnowiec</title>
 		<link rel="stylesheet" href="{% static 'css/LAN1.css' %}">
    	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		
    	<title>LAN Sosnowiec</title>
 	</head>
 
-	<body> 
+	<body class="backgr"> 
 		<div class="page-header">
    	<h3><a href="/">LAN Sosnowiec manager</a></h3>
    	</div>
 		<div class="content container">
    	<div class="row">
-   	<div class="col-md-7">
+   	<div class="col-md-9">
 		{% block content %}
 		{% endblock %}
    	</div>

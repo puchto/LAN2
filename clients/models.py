@@ -61,5 +61,5 @@ class Client_fw(models.Model):
         db_table = "LAN_Client_fw"
         
     def __str__(self):
-        return self.cl_address
+        return self.cl_address_ul
     

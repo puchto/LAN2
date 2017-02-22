@@ -11,7 +11,7 @@
 	<td>{{client.ip_add}}</td>
 	<td>{% if client.kl_service == '0' %} Aktywny {% elif client.kl_service == '3' %} Windykacja 
 	{% elif client.kl_service == '5' %} Odłączony {% endif %} </td>
-	<td>{{client.downl}}</td>
+	<td>	{{client.downl}}</td>
 	<td>{{client.upl}}</td>
 	<td><a href="{%url 'client_edit' pk=client.pk %}"> Edycja </a></td>
 </tr>
