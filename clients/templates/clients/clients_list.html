@@ -1,0 +1,23 @@
+{% extends 'clients/base.html' %}
+
+{% block content %}
+<table>
+{% for client in clients %}
+
+
+<tr>
+	<td><a href="{%url 'client_info' pk=client.pk %}"> {{client.cl_address}} </a></td>
+	<td>{{client.mac}}</td>
+	<td>{{client.ip_add}}</td>
+	<td>{% if client.kl_service == '0' %} Aktywny {% elif client.kl_service == '3' %} Windykacja 
+	{% elif client.kl_service == '5' %} Odłączony {% endif %} </td>
+	<td>	{{client.downl}}</td>
+	<td>{{client.upl}}</td>
+	<td><a href="{%url 'client_edit' pk=client.pk %}"> Edycja </a></td>
+</tr>
+
+{% endfor %}
+</table>
+   
+{% endblock content %}
+

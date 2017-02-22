@@ -1,0 +1,13 @@
+{% extends 'clients/base.html' %}
+
+{% block content %}
+	<p><h5>Edycja klienta</h></p>
+	<p>Klient: {{client.cl_address}} </p>
+	<form method="POST" class="post-form">{% csrf_token %}
+	{{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+   </form>
+ 
+
+
+{% endblock content %}

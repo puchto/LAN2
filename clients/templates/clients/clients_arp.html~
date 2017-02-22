@@ -1,0 +1,14 @@
+{% extends 'clients/base.html' %}
+{% block content %}
+<table>
+	<td><tr>Klient</tr>	<tr>mac</tr></td>
+{% for client in clients %}
+	<tr>
+	<td>{{client.cl_address}}</td>
+	<td>{{client.mac}}</td>
+	</tr>
+
+{% endfor %}
+</table>
+   
+{% endblock content %}
